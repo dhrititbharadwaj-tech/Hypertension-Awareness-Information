@@ -56,15 +56,17 @@ metrics <- results %>%
 print("Evaluation Metrics (Test Set):")
 print(metrics)
 
-# Compare Actual Awareness vs. Model Predictions
-#plot(results$Hyp_Data_value, results$Pred_Awareness,
- #    main = "Actual vs. Predicted Awareness (No Overlap Data)",
-  #   xlab = "Actual Awareness (%)", 
-   #  ylab = "Predicted Awareness (%)",
-    # pch = 19, col = rgb(0.2, 0.5, 0.5, 0.6))
+par(mar = c(5, 4, 4, 2))
 
-# Add a reference line (Perfect match line)
-#abline(0, 1, col = "red", lwd = 2, lty = 2)
+#Compare Actual Awareness vs. Model Predictions
+  plot(results$Hyp_Data_value, results$Pred_Awareness,
+     main = "Actual vs. Predicted Awareness (No Overlap Data)",
+     xlab = "Actual Awareness (%)", 
+     ylab = "Predicted Awareness (%)",
+     pch = 19, col = rgb(0.2, 0.5, 0.5, 0.6))
+
+#Add a reference line (Perfect match line)
+abline(0, 1, col = "red", lwd = 2, lty = 2)
 
 ####ZCTA TRAINING 
 
