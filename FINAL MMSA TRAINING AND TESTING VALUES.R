@@ -67,10 +67,10 @@ ggplot(plot_data, aes(x = Awareness_Perc, y = Pred_Awareness, color = Dataset)) 
   geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red") +
   facet_wrap(~Dataset) +
   labs(
-    title = "Model Accuracy: Actual vs. Predicted Awareness",
+    title = "Model Accuracy: Actual vs. Predicted Unawareness",
     subtitle = "Red dashed line indicates a perfect 1-to-1 prediction",
-    x = "Actual Awareness (%)",
-    y = "Predicted Awareness (%)"
+    x = "Actual Unawareness (%)",
+    y = "Predicted Unawareness (%)"
   ) +
   theme_minimal() +
   scale_color_brewer(palette = "Set1")
